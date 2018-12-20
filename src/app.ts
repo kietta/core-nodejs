@@ -9,7 +9,7 @@ app.use(json());
 app.use(onError);
 
 // if (!process.env.NODE_ENV) app.use((req, res, next) => setTimeout(next, 500));
-app.get('/', (req, res) => res.send({ success: true }));
+app.get('/', (req, res) => res.send({ success: true, message: 'WELCOME!' }));
 
 app.use((req, res) => res.status(404).send({ success: false, message: 'INVALID_ROUTE' }));
 
